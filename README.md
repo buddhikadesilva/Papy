@@ -2,7 +2,7 @@
 Autonomous car project , Detect the road and follow the signals then react to it.
 
 Plan
-1. Stepup Raspberry pi with webcam on processing__[completed]
+1. Stepup Raspberry pi with webcam on processing_[completed]
 2. Access with arduino and Raspberry pi_____________[completed]
 3. Build a chasis
 4. Code to arduino

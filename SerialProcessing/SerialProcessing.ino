@@ -15,10 +15,13 @@ int in4 = 6;
 void setup() {
   pinMode(PinLed, OUTPUT);
 
-pinMode(8, OUTPUT);
-pinMode(9, OUTPUT);
+pinMode(enA, OUTPUT);
+pinMode(in1, OUTPUT);
+pinMode(in2, OUTPUT);
 
-pinMode(6, OUTPUT);
+pinMode(enB, OUTPUT);
+pinMode(in3, OUTPUT);
+pinMode(in4, OUTPUT);
   
   Serial.begin(9600);
 }
@@ -27,19 +30,29 @@ void loop() {
   if (Serial.available() > 0) {
     char Data = Serial.read();
     state = !state;
-    if (Data=='a') { // forward
+    if (Data=='f') { // forward
       
     mpower(1,1,100);
     mpower(2,1,100);
     }
-     if (Data=='b') { // back
+    else if (Data=='b') { // back
       
     mpower(1,-1,100);
     mpower(2,-1,100);
     }
+     else if (Data=='l') { // left
+      
+    mpower(1,1,100);
+    mpower(2,-1,100);
+    }
+     else if (Data=='r') { // right
+      
+    mpower(1,-1,100);
+    mpower(2,1,100);
+    }
     else{
-       digitalWrite(8, 0);
-      digitalWrite(9, 0);
+       mpower(1,0,100);
+    mpower(2,0,100);
       
       }
   

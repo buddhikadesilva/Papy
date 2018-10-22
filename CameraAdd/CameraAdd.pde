@@ -25,7 +25,7 @@ void setup() {
   
    
  // Open the port you are using at the rate you want:
-  MySerial = new Serial(this, Serial.list()[0], 9600);
+  MySerial = new Serial(this, Serial.list()[7], 9600);
   
   
 // List all the available serial ports:
@@ -122,16 +122,16 @@ void draw() {
     ///////////////////////////////////////////////640---------------   320 | 320        160 160 | 160 160      80 80 80 80 | 80 80 80 80
     if(lineCenter>(3*320/8) && lineCenter<(5*320/8)){ // x2>x1  
     println("FORWARD--------");
-      MySerial.write('a');
+      MySerial.write('f');
     
     }
     if(lineCenter<=(3*320/8)){ // x2>x1
      println("LEFT--------");
-       MySerial.write('b');
+       MySerial.write('l');
     }
      if(lineCenter>=(5*320/8)){ // x2>x1
      println("RIGHT--------");
-       MySerial.write('b');
+       MySerial.write('r');
     }
     
    }

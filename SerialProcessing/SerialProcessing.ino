@@ -32,23 +32,23 @@ void loop() {
     state = !state;
     if (Data=='f') { // forward
       
-    mpower(1,1,100);
-    mpower(2,1,100);
+    mpower(1,1,60);
+    mpower(2,1,60);
     }
     else if (Data=='b') { // back
       
-    mpower(1,-1,100);
-    mpower(2,-1,100);
+    mpower(1,-1,70);
+    mpower(2,-1,70);
     }
      else if (Data=='l') { // left
       
-    mpower(1,1,100);
-    mpower(2,-1,100);
+    mpower(1,1,70);
+    mpower(2,1,50);
     }
      else if (Data=='r') { // right
       
-    mpower(1,-1,100);
-    mpower(2,1,100);
+    mpower(1,1,50);
+    mpower(2,1,70);
     }
     else{
        mpower(1,0,100);
